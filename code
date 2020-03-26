@@ -4,7 +4,7 @@ class solve
     static int SIZE =9;
 
     private static int[][] A = {
-        {0,0,0,0,8,0,0,0,0},
+        {0,0,0,0,8,0,0,0,0},  //sample input sudoku '0'represents empty spaces
         {8,0,9,0,7,1,0,2,0},
         {4,0,3,5,0,0,0,0,1},
         {0,0,0,1,0,0,0,0,7},
@@ -24,6 +24,7 @@ class solve
             {
                 System.out.print(A[i][j]+"\t");
             }
+	    //To display the output 
             System.out.println("");
         }
     }
@@ -83,7 +84,7 @@ class solve
     }
 
    
-    public static boolean SolveSU()
+    public static boolean SolveSU()  //Main logic to solve sudoku
     {
         int row=0;
         int col=0;
