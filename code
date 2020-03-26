@@ -120,6 +120,6 @@ public class Sudoku extends solve{
         if (SolveSU())
             DispSudoku();
         else
-            System.out.println("this puzzel is not valied");
+            System.out.println("this puzzel is not valid");
     }
 }
