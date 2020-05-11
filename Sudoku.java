@@ -84,11 +84,12 @@ class solve
     }
 
    
-    public static boolean SolveSU()  //Main logic to solve sudoku
+    public static boolean SolveSU()  //returns weather the given values are valid or not
+	    
     {
         int row=0;
         int col=0;
-        int[] a = Unassigned(row, col);
+        int[] a = Unassigned(row, col);//unassigning unmatched values with 0(Replacing)
        
         if(a[0] == 0)
             return true;
@@ -98,11 +99,11 @@ class solve
         for(int i=1;i<=SIZE;i++)
         {
          
-            if(Done(i, row, col))
+            if(Done(i, row, col))// checking Done method
             {
                 A[row][col] = i;
                 
-                if(SolveSU())
+                if(SolveSU())//recurse the method
                     return true;
              
                 A[row][col]=0;
@@ -120,6 +121,6 @@ public class Sudoku extends solve{
         if (SolveSU())
             DispSudoku();
         else
-            System.out.println("this puzzel is not valid");
+            System.out.println("The values in the puzzel is not valid");
     }
 }
